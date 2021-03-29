@@ -26,9 +26,25 @@ public class Main {
         car1.addDecrease(20);
         car1.finish();
 
+        Fraction fraction1 = new Fraction(1, (short) 4);
+        Fraction fraction2 = new Fraction(2, (short) 5);
+        System.out.println(fraction1.add(fraction2).toString());
+        System.out.println(fraction1.minus(fraction2).toString());
+        System.out.println(fraction1.mul(fraction2).toString());
+        System.out.println(fraction1.div(fraction2).toString());
+        System.out.println("Equals fraction: " + fraction1.equals(fraction2));
 
 
-
+        Money money1 = new Money();
+        Money money2 = new Money(4, (byte) 99);
+        money1.add(money2);
+        money1.add(money2);
+        money1.minus(money2);
+        System.out.println((money1.multiplication(money2)).toString());
+        System.out.println(money1.multiplication(4.99).toString());
+        System.out.println(money1.div(2).toString());
+        System.out.println(money1.div(money2).toString());
 
     }
 }
+
