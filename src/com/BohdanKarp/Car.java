@@ -1,17 +1,17 @@
 package com.BohdanKarp;
 
 public class Car {
-    private boolean on = false;
-    private boolean run = false;
+    private boolean isMotorStart = false;
+    private boolean isRunning = false;
     private int speed = 0;
 
     public void print() {
-        System.out.println("Car start: " + on + "; car run: " + run + "; car speed: " + speed);
+        System.out.println("Car start: " + isMotorStart + "; car run: " + isRunning + "; car speed: " + speed);
     }
 
     public void start() {
-        if (!on) {
-            on = true;
+        if (!isMotorStart) {
+            isMotorStart = true;
             System.out.println("motor start");
         } else {
             System.out.println("!not start motor already working");
@@ -19,10 +19,10 @@ public class Car {
     }
 
     public void finish() {
-        if (on) {
-            on = false;
+        if (isMotorStart) {
+            isMotorStart = false;
             speed = 0;
-            run = false;
+            isRunning = false;
             System.out.println("motor finish");
         } else {
             System.out.println("!not finish motor not working");
@@ -30,10 +30,10 @@ public class Car {
     }
 
     public void run() {
-        if (on) {
-            on = true;
+        if (isMotorStart) {
+            isMotorStart = true;
             speed = 5;
-            run = true;
+            isRunning = true;
             System.out.println("Car run; speed " + speed + "km/h");
         } else {
             System.out.println("!motor not working");
@@ -41,15 +41,15 @@ public class Car {
     }
 
     public void addSpeed(int acceleration) {
-        if (run) {
+        if (isRunning) {
             speed += acceleration;
             System.out.println("Car speed " + speed + "km/h");
         } else System.out.println("!Car not run ");
 
     }
 
-    public void addDecrease(int decrease) {
-        if (run) {
+    public void decrease(int decrease) {
+        if (isRunning) {
             if (speed > decrease) {
                 speed -= decrease;
                 System.out.println("Car speed " + speed + "km/h");
@@ -57,5 +57,4 @@ public class Car {
         } else System.out.println("!Car not run ");
 
     }
-
 }

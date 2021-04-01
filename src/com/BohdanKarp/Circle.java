@@ -55,6 +55,5 @@ public class Circle {
         if (radius >= 0) {
             this.radius = radius;
         } else System.out.println("radius must be positive");
-
     }
 }

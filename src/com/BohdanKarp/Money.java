@@ -77,10 +77,12 @@ public class Money {
     }
 
     public Money div(Money money) {
+
         return toMoney(this.toCent() * 100 / money.toCent());
     }
 
     public Money div(double multiplier) {
+
         return toMoney((long) (this.toCent() / multiplier));
     }
 

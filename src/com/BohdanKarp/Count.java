@@ -10,5 +10,4 @@ public class Count {
     public static void print() {
         System.out.println("count of created objects: " + count);
     }
-
 }
